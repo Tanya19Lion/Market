@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,71 +10,298 @@
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
-<header class="header">
-    <div class="header_top">
-        <div class="container">
-            <div class="header_inner">
-                <div class="header_logo">
-                    <a href="#">
-                        <img src="images/logo.png" alt="logo">
-                    </a>
-                </div>
-                <div class="header_text">
-                    <a href="#"> <span>Need help? </span></a> Talk to an expert:
-                    <a class="header_phone" href="tel:61383766284"> +61 3 8376 6284</a>
-                </div>
-                <div class="header_box">
-                    <a href="#" class="busket"></a>
-                    <a href="#" class="header_btn header_btn_login">Login</a>
-                    <a href="#" class="header_btn header_btn_register">Register</a>
+    <header class="header">
+        <div class="header_top">
+            <div class="container">
+                <div class="header_inner">
+                    <div class="header_logo">
+                        <a href="#">
+                            <img src="images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header_text">
+                        <a href="#"> <span>Need help? </span></a> Talk to an expert:
+                        <a class="header_phone" href="tel:61383766284"> +61 3 8376 6284</a>
+                    </div>
+                    <div class="header_box">
+                        <a href="#" class="busket"></a>
+                        <a href="#" class="header_btn header_btn_login">Login</a>
+                        <a href="#" class="header_btn header_btn_register">Register</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="header_menu">
-        <div class="container">
-            <nav class="menu">
-                <ul class="menu_list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">WordPress</a></li>
-                    <li><a href="#">Joomla</a></li>
-                    <li><a href="#">PSD</a></li>
-                    <li><a href="#">Plugins</a></li>
-                    <li><a href="#">Components</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-<section class="search" style="background-image: url(images/search_bg.jpg);">
-    <div class="container">
-        <div class="search_inner">
-            <div class="search_inner_title">
-                Welcome To Foxtar Market Place!
-            </div>
-            <div class="search_inner_text">
-                Premium WordPress Themes, Web Templates and Many More ...
-            </div>
-            <div class="search_inner_form">
-                 <form action="#">
-                    <input type="text" placeholder="Search Your Keywords . . " required>
-                    <button type="submit">
-                        <img src="images/search.png" alt="search_logo">
-                    </button>
-                 </form>
+        <div class="header_menu">
+            <div class="container">
+                <nav class="menu">
+                    <ul class="menu_list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">WordPress</a></li>
+                        <li><a href="#">Joomla</a></li>
+                        <li><a href="#">PSD</a></li>
+                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <script>src="js/libs.min.js"</script>
-    <script src="js/main.min.js"></script>
+    <section class="search" style="background-image: url(images/search_bg.jpg);">
+        <div class="container">
+            <div class="search_inner">
+                <div class="search_inner_title">
+                    Welcome To Foxtar Market Place!
+                </div>
+                <div class="search_inner_text">
+                    Premium WordPress Themes, Web Templates and Many More ...
+                </div>
+                <div class="search_inner_form">
+                    <form action="#">
+                        <input type="text" placeholder="Search Your Keywords . . " required>
+                        <button type="submit">
+                            <img src="images/search.png" alt="search_logo">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container_fluid">
+            <div class="products_title title">
+                Let’s Check Out Our Newest Release Products
+            </div>
+            <div class="products_inner">
+                <div class="products_inner_btn">
+                    <button type="button" data-filter="all">All</button>
+                    <button type="button" data-filter=".category-wordpress">WordPress</button>
+                    <button type="button" data-filter=".category-joomla">Joomla</button>
+                    <button type="button" data-filter=".category-plugins">Plugins</button>
+                    <button type="button" data-filter=".category-component">Component</button>
+                    <button type="button" data-filter=".category-psd">PSD</button>
+                </div>
+                <div class="products_inner_box">
+                    <div class="product_item mix category-wordpress" data-order="1">
+                        <a href="#" class="product_item_img" style="background-image: url(images/image1.jpg);"></a>
+                        <div class="product_item_content">
+                            <div class="product_item_name">
+                                <a href="#" class="product_item_title">
+                                    Responsive Mobile APP
+                                </a>
+                                <a href="#" class="product_item_category">
+                                    Site Template
+                                </a>
+                            </div>
+                            <div class="product_item_price">
+                                $19
+                            </div>
+                        </div>
+                        <div class="product_item_info">
+                            <a href="#" class="product_item_author">
+                                <div class="avatar" style="background-image: url(images/human.png);"></div>
+                                <span> Radiustheme</span>
+                            </a>
+                            <div class="product_item_star">
+                                (05)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_item mix category-joomla" data-order="2">
+                        <a href="#" class="product_item_img" style="background-image: url(images/image2.jpg);"></a>
+                        <div class="product_item_content">
+                            <div class="product_item_name">
+                                <a href="#" class="product_item_title">
+                                    Responsive Mobile APP
+                                </a>
+                                <a href="#" class="product_item_category">
+                                    Site Template
+                                </a>
+                            </div>
+                            <div class="product_item_price">
+                                $19
+                            </div>
+                        </div>
+                        <div class="product_item_info">
+                            <a href="#" class="product_item_author">
+                                <div class="avatar" style="background-image: url(images/human.png);"></div>
+                                <span> Radiustheme</span>
+                            </a>
+                            <div class="product_item_star">
+                                (05)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_item mix category-psd" data-order="3">
+                        <a href="#" class="product_item_img" style="background-image: url(images/image3.jpg);"></a>
+                        <div class="product_item_content">
+                            <div class="product_item_name">
+                                <a href="#" class="product_item_title">
+                                    Responsive Mobile APP
+                                </a>
+                                <a href="#" class="product_item_category">
+                                    Site Template
+                                </a>
+                            </div>
+                            <div class="product_item_price">
+                                $19
+                            </div>
+                        </div>
+                        <div class="product_item_info">
+                            <a href="#" class="product_item_author">
+                                <div class="avatar" style="background-image: url(images/human.png);"></div>
+                                <span> Radiustheme</span>
+                            </a>
+                            <div class="product_item_star">
+                                (05)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_item mix category-plugins category-new" data-order="4">
+                        <a href="#" class="product_item_img" style="background-image: url(images/image4.jpg);"></a>
+                        <div class="product_item_content">
+                            <div class="product_item_name">
+                                <a href="#" class="product_item_title">
+                                    Responsive Mobile APP
+                                </a>
+                                <a href="#" class="product_item_category">
+                                    Site Template
+                                </a>
+                            </div>
+                            <div class="product_item_price">
+                                $19
+                            </div>
+                        </div>
+                        <div class="product_item_info">
+                            <a href="#" class="product_item_author">
+                                <div class="avatar" style="background-image: url(images/human.png);"></div>
+                                <span> Radiustheme</span>
+                            </a>
+                            <div class="product_item_star">
+                                (05)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_item mix category-component category-popular" data-order="5">
+                        <a href="#" class="product_item_img" style="background-image: url(images/image5.jpg);"></a>
+                        <div class="product_item_content">
+                            <div class="product_item_name">
+                                <a href="#" class="product_item_title">
+                                    Responsive Mobile APP
+                                </a>
+                                <a href="#" class="product_item_category">
+                                    Site Template
+                                </a>
+                            </div>
+                            <div class="product_item_price">
+                                $19
+                            </div>
+                        </div>
+                        <div class="product_item_info">
+                            <a href="#" class="product_item_author">
+                                <div class="avatar" style="background-image: url(images/human.png);"></div>
+                                <span> Radiustheme</span>
+                            </a>
+                            <div class="product_item_star">
+                                (05)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_item mix category-joomla" data-order="6">
+                        <a href="#" class="product_item_img" style="background-image: url(images/image6.jpg);"></a>
+                        <div class="product_item_content">
+                            <div class="product_item_name">
+                                <a href="#" class="product_item_title">
+                                    Responsive Mobile APP
+                                </a>
+                                <a href="#" class="product_item_category">
+                                    Site Template
+                                </a>
+                            </div>
+                            <div class="product_item_price">
+                                $19
+                            </div>
+                        </div>
+                        <div class="product_item_info">
+                            <a href="#" class="product_item_author">
+                                <div class="avatar" style="background-image: url(images/human.png);"></div>
+                                <span> Radiustheme</span>
+                            </a>
+                            <div class="product_item_star">
+                                (05)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_item mix category-psd category-popular" data-order="7">
+                        <a href="#" class="product_item_img" style="background-image: url(images/image7.jpg);"></a>
+                        <div class="product_item_content">
+                            <div class="product_item_name">
+                                <a href="#" class="product_item_title">
+                                    Responsive Mobile APP
+                                </a>
+                                <a href="#" class="product_item_category">
+                                    Site Template
+                                </a>
+                            </div>
+                            <div class="product_item_price">
+                                $19
+                            </div>
+                        </div>
+                        <div class="product_item_info">
+                            <a href="#" class="product_item_author">
+                                <div class="avatar" style="background-image: url(images/human.png);"></div>
+                                <span> Radiustheme</span>
+                            </a>
+                            <div class="product_item_star">
+                                (05)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_item mix category-psd category-popular" data-order="8">
+                        <a href="#" class="product_item_img" style="background-image: url(images/image8.jpg);"></a>
+                        <div class="product_item_content">
+                            <div class="product_item_name">
+                                <a href="#" class="product_item_title">
+                                    Responsive Mobile APP
+                                </a>
+                                <a href="#" class="product_item_category">
+                                    Site Template
+                                </a>
+                            </div>
+                            <div class="product_item_price">
+                                $19
+                            </div>
+                        </div>
+                        <div class="product_item_info">
+                            <a href="#" class="product_item_author">
+                                <div class="avatar" style="background-image: url(images/human.png);"></div>
+                                <span> Radiustheme</span>
+                            </a>
+                            <div class="product_item_star">
+                                (05)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products_bottom_btn">
+                <button type="button" data-filter=".category-new">All new items</button>
+                <button type="button" data-filter=".category-popular">Popular Items</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -21,10 +21,29 @@ ul, li {
     margin: 0 auto;
     padding: 0 15px;
 }
+.container_fluid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     color: $text;
+}
+.title {
+    color: $bg;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 720px) {
+    .container_fluid {
+        padding: 0 15px;
+    }
 }
