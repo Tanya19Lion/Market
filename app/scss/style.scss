@@ -1,0 +1,16 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.box {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    transition: all .3s;
+}
