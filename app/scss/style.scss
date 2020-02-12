@@ -202,9 +202,6 @@
         }
     }
 }
-.product_item:last-child {
-    margin-right: 0;
-}
 .products_bottom_btn {
     text-align: center;
     button {
@@ -347,5 +344,36 @@
         font-size: 18px;
         line-height: 36px;
     }
-    
+}
+.tutorial {
+    padding: 70px 0 120px;
+    &_inner {
+        display: flex;
+        justify-content: center;
+    }
+    &_item {
+        max-width: 370px;
+        width: 100%;
+    }
+}
+.tutorial_item {
+    margin-right: 30px;
+    &_images {
+        min-height: 270px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &_title {
+        background-color: #f8f8f8;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+        padding: 30px 10px;
+        color: $bg;
+    }
+}
+.product_item:last-child,
+.tutorial_item:last-child {
+    margin-right: 0;
 }
