@@ -2,6 +2,9 @@
 @import '_global';
 @import '_fonts';
 
+.header {
+    background-color: #fff;
+}
 .header_inner {
     display: flex;
     justify-content: space-between;
@@ -22,6 +25,7 @@
     border-radius: 4px;
     text-align: center;
     font-size: 12px;
+    margin-left: 15px;
     &_login {
         background-color: $green;
     }
@@ -50,6 +54,303 @@
         font-size: 14px;
     }
  }
+.header_circle {
+    display: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: relative;
+    &.active {
+        display: block;
+    }
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: #a0a0a0;
+        font-size: 14px;
+    }
+    span {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        right: -7px;
+        top: -7px;
+        font-size: 11px;
+        color: #fff;
+    }
+}
+.notification {
+    span {
+        background-color: $yellow;
+    }
+}
+.message {
+    span {
+        background-color: $tomato;
+    }
+}
+.basket {
+    margin-right: 20px;
+    span {
+        background-color: $green;
+    }
+}
+.header_box {
+    display: flex;
+    align-items: center;
+}
+.user{
+    margin-right: 25px;
+    padding-right: 20px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "\f107";
+        font-family: 'icomoon';
+        font-size: 16px;
+        color: #707070;
+        top: 0;
+        right: 0;
+    }
+    &_inner {
+        display: flex;
+        align-items: center;
+    }
+    &_images {
+        margin-right: 15px;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &_info {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    &_name {
+        font-weight: 500;
+        color: #222;
+    }
+    &_money {
+        color: $green;
+        font-weight: 700;
+    }
+}
+.header_btn_login--off {
+    display: none;
+}
+.header_btn_logout {
+    background-color: $red;
+    margin-left: 7px;
+    display: none;
+    &.header_btn_login--on {
+        display: block;
+    }
+}
+.user_menu {
+    width: 158px;
+    border: 0px solid rgb(204,204,204);
+    background-color: #fff;
+    position: absolute;
+    padding: 0 20px;
+    top: 69px;
+    left: 20px;
+    transition: all .3s;
+    height: 0;
+    overflow: hidden;
+    z-index: 2;
+    a {
+        font-size: 12px;
+        color: #546e7a;
+        margin-bottom: 15px;
+    }
+} 
+.basket_menu {
+    width: 270px;
+    top: 62px;
+    right: 0;
+    position: absolute;
+    border-top: 1px solid #e0e0e0;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+    z-index: 2;
+    background-color: #fff;
+}
+.user_box,
+.basket_box {
+    position: relative;
+    height: 90px;
+    margin-top: 40px;
+    &:hover {
+        .user_menu {
+            height: auto;
+            border-width: 1px;
+            padding: 20px;
+        }
+    }
+}
+.notification_menu,
+.message_menu {
+    width: 270px;
+    top: 62px;
+    right: 0;
+    position: absolute;
+    border-top: 1px solid #e0e0e0;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+    background-color: #fff;
+    z-index: 2;
+    .circle_images {
+        margin-right: 20px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    .circle_info {
+        line-height: 18px;
+    }
+}
+.notification_box {
+    height: 90px;
+    margin-top: 54px;
+    margin-left: 15px;
+    position: relative;
+    &:hover {
+        .header_circle::before {
+            color: $bg;
+        }
+        .notification_menu {
+            height: auto;
+            overflow: visible;
+        }
+        .circle_item {
+            border-width: 1px;
+            padding: 23px;
+        }
+    }
+}
+.message_box {
+    height: 90px;
+    margin-top: 54px;
+    margin-left: 15px;
+    position: relative;
+    &:hover {
+        .header_circle::before {
+            color: $bg;
+        }
+        .message_menu {
+            height: auto;
+            overflow: visible;
+        }
+        .circle_item {
+            border-width: 1px;
+            padding: 23px;
+        }
+    }
+}
+.circle_item {
+    position: relative;
+    background-color: #fff;
+    border: 0px solid #e0e0e0;
+    padding: 0 23px;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    &::before {
+        position: absolute;
+        top: 35px;
+        right: 28px;
+        font-size: 16px;
+    }
+    &.icons_color {
+        color: $tomato;
+    }
+}
+.circle_info_date {
+    font-size: 10px;
+    color:#707070;
+}
+.basket_box {
+    margin-top: 54px;
+    margin-left: 15px;
+    &:hover {
+        .header_circle::before {
+            color: $bg;
+        }
+        .basket_menu {
+            height: 100%;
+            overflow: visible;
+        }
+    }
+}
+.basket_item{
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 23px;
+    border-top: none;
+    display: flex;
+    align-items: center;
+}
+.basket_images, .circle_images {
+    margin-right: 15px;
+}
+.basket_info, .circle_info {
+    &_name {
+        font-weight: 500;
+        color: $bg;
+    }
+    &_theme {
+        font-size: 12px;
+        color: $green;
+    }
+    &_price {
+        font-weight: 500;
+        font-size: 16px;
+        color: #000;
+    }
+}
+.basket_summ {
+    background-color: #fff;
+    padding: 16px 17px 12px;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+}
+.basket_title {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 13px;
+    padding-right: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: $bg;
+}
+.basket_btn {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 5px;
+    background-color: $green;
+    text-align: center;
+    width: 102px;
+}
+.basket_btn_checkout {
+    margin-left: 6px;
+    width: 120px;
+    background-color: $red;
+}
+.header_btn_menu, .menu_btn {
+    display: none;
+}
+
 .search {
     background-repeat: no-repeat;
     background-size: cover;
@@ -870,3 +1171,5 @@ button .icon-unsorted, .product_page_filter_sort {
         }
     }
 }
+
+@import '_media.scss';
