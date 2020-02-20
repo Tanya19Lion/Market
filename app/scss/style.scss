@@ -94,8 +94,8 @@
 }
 .fancybox-button svg path {
     fill: #fff;
-    // stroke-width: 0;
 }
+
 .header {
     background-color: #fff;
 }
@@ -1418,6 +1418,11 @@ button .icon-unsorted, .product_page_filter_sort {
             color: #70838d;
             padding: 20px 0;
             cursor: pointer;
+            &.active {
+                color: $bg;
+                font-weight: 500;
+                border-bottom: 3px solid $green;
+            }
             & + .tab {
                 border-left: 1px solid #d7d7d7;
             }
@@ -1581,5 +1586,81 @@ button .icon-unsorted, .product_page_filter_sort {
         font-weight: 500;
     }
 }
+
+.page_404, .about {
+    &_wrapper {
+        border: 1px solid #dcdcdc;
+        background-color: #fff;
+        margin-bottom: 150px;
+    }
+    &_head {
+        font-size: 24px;
+        color: #444;
+        font-weight: 500;
+        padding: 23px 27px;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    &_inner {
+        text-align: center;
+        background-color: $green;
+    }
+    &_404 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 300px;
+        color: #fff;
+        padding-top: 70px;
+        line-height: 300px;
+        position: relative;
+        &::after {
+            content:"";
+            position: absolute;
+            background-image: url(../images/page_404.png);
+            width: 150px;
+            height: 292px;
+            margin-left: 20px;
+        }
+    }
+    &_title {
+        font-weight: 300;
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: #fff;
+    }
+    &_text {
+        max-width: 500px;
+        margin: 0 auto 50px;
+        font-size: 18px;
+        color: #fff;
+    }
+    &_link {
+        font-size: 14px;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 20px 30px 16px;
+        border-radius: 4px;
+        margin-bottom: 100px;
+    }
+}
+.about_inner {
+    background-color: #fff;
+    text-align: left;
+    padding: 0px 50px;
+}
+.about_box {
+    h3 {
+        font-weight: 700;
+        font-size: 20px;
+        color: #444;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }   
+    p {
+        margin-bottom: 40px;
+    }
+}
+
+
+
 
 @import '_media.scss';
