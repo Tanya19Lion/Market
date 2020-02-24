@@ -51,6 +51,8 @@ $(function(){
                return false;
           });
 
+     $('input[type="file"], select').styler();
+
      let mixer = mixitup(".products_inner_box");
      
   
