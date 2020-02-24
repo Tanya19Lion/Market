@@ -42,10 +42,10 @@ $(function(){
           $(".header_box").toggleClass("active");
      });
 
-     $('.product_one_tabs .tab').on('click', function(event) {
+     $('.product_one_tabs .tab, .settings_tabs .tab').on('click', function(event) {
           var id = $(this).attr('data-id');
-               $('.product_one_tabs').find('.tab-item').removeClass('active-tab').hide();
-               $('.product_one_tabs .tabs').find('.tab').removeClass('active');
+               $('.product_one_tabs, .settings_tabs').find('.tab-item').removeClass('active-tab').hide();
+               $('.product_one_tabs .tabs, .settings_tabs .tabs').find('.tab').removeClass('active');
                $(this).addClass('active');
                $('#'+id).addClass('active-tab').fadeIn();
                return false;
