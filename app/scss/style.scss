@@ -513,6 +513,10 @@
     padding: 110px 0px;
     background-color: $grey;
 }
+.products_wrapper, .product_slider_wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
 .products_inner_btn {
    text-align: center;
    margin-bottom: 60px;
@@ -534,16 +538,22 @@
 }
 .products_inner_box {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: -30px;
+}
+.products {
+    .product_item {
+        flex-basis: calc(25% - 30px);
+        margin-left: 30px;
+        max-width: 442px;
+        width: 100%;
+        box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, .75);
+        margin-bottom: 30px;
+    }
 }
 .product_item {
-    max-width: 442px;
-    width: 100%;
-    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, .75);
-    margin-bottom: 30px;
-    margin-right: 30px;
-     &_img {
+    &_img {
         min-height: 250px;
         background-repeat: no-repeat;
         background-position: center;
@@ -1122,10 +1132,11 @@
 }
 .product_page_content {
     .product_item {
-        max-width: 270px;  
+        flex-basis: calc(33.3333% - 30px);
         background-color: #fff;
         margin-right: 0; 
         transition: all .5s;
+        margin-left: 30px;        
         &_img {
             min-height: 180px;
         }
@@ -1161,9 +1172,10 @@ button .icon-unsorted, .product_page_filter_sort {
 }
 .product_page_items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    margin-left: -30px;
 }
 .pagination_list {
     li {
@@ -1229,6 +1241,7 @@ button .icon-unsorted, .product_page_filter_sort {
     .product_item {
         &.list {
             max-width: 100%;
+            flex-basis: 100%;
             .product_item_img {
                 width: 240px;
                 float: left;
@@ -1280,7 +1293,7 @@ button .icon-unsorted, .product_page_filter_sort {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 16px 0;
+        padding: 16px;
     }
     &_images {
         max-width: 829px;
@@ -1460,6 +1473,73 @@ button .icon-unsorted, .product_page_filter_sort {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    form {
+        .jq-selectbox__select {
+            height: 27px;
+            line-height: 27px;
+            padding: 5px 30px 0px 10px;
+            border: 1px solid #d5d5d5;
+            border-bottom-color: none;
+            border-radius: 0px;
+            background: #fff;
+            box-shadow: none;
+            font: 13px 'Roboto',sans-serif;
+            color: #70838d;
+            text-shadow: none;
+        }
+        .jq-selectbox__trigger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 34px;
+            height: 100%;
+            border-left: none;
+        }
+        .jq-selectbox.focused .jq-selectbox__select {
+            border: 1px solid #d5d5d5;
+        }
+        .jq-selectbox__trigger-arrow {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid $green;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+        }
+        .jq-selectbox__trigger-arrow:hover {
+            border-top: 5px solid $green;
+        }
+        .jq-selectbox:hover .jq-selectbox__trigger-arrow {
+            border-top-color: $green;
+        }
+        .jq-selectbox:hover .jq-selectbox__trigger-arrow {
+            color: $green;
+        }
+        .jq-selectbox__dropdown{
+            height: auto;
+            bottom: auto;
+            top: 24px;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 2px 0 0;
+            padding: 0;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: none;
+            font: 13px 'Roboto',sans-serif;
+        }
+        .jq-selectbox li:hover {
+            background-color: lightblue;
+        }
+        .jq-selectbox li {
+            border-top:  1px solid #d5d5d5;
+            color: #707070;
+            background-color: #fff;
+        }
+    }
 }
 .price_product {
     color: $red;
@@ -1932,6 +2012,12 @@ button .icon-unsorted, .product_page_filter_sort {
     }
     .jq-selectbox__trigger {
         border-left: none;
+    }
+    .jq-selectbox__dropdown {
+        left: 0px;
+        top: 37px;
+        height: auto;
+        bottom: unset;
     }
 }
 
