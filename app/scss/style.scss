@@ -1810,6 +1810,12 @@ button .icon-unsorted, .product_page_filter_sort {
     .tab_content {
         width: 100%;
     }
+    .tab-item {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
 }
 .page_box {
     background-color: #fff;
@@ -1843,7 +1849,7 @@ button .icon-unsorted, .product_page_filter_sort {
         width: 260px;
         color: #444;
     }
-    input {
+    input, select {
         max-width: 540px;
         width: 100%;
         height: 40px;
@@ -1853,13 +1859,79 @@ button .icon-unsorted, .product_page_filter_sort {
         padding: 0 10px;
     }
     select {
-        max-width: 540px;
+         color: #707070;
+    }
+    .jq-file {
+        width: 100%;
+        padding: 0px 18px;
+        box-shadow: none;
+        border-radius: 0px;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+    }
+    .jq-file__name {
+        box-sizing: border-box;
         width: 100%;
         height: 40px;
+        padding: 0;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        font-size: 12px;
         color: #707070;
-        background-color: #f9f9f9;
-        border: 1px solid #dedede;
-        padding: 0 10px;
+        line-height: 40px;
+        margin-left: 100px;
+        outline: none;
+    }
+    .jq-file__browse {
+        top: 5px;
+        right: auto;
+        left: 9px;
+        padding: 0px 12px;
+        line-height: 26px;
+        border: 1px solid #d7d7d7;
+        border-left: 1px solid #d7d7d7;
+        border-radius: 0;
+        background:#fff;
+        box-shadow: none;
+        text-shadow: none;
+        color: #444;
+        font-size: 12px;
+        outline: none;
+    }
+    .jq-selectbox {
+        width: 100%;
+        max-width: 540px;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color:  #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font: 14px 'Roboto', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        right: 20px;
+        font-size: 15px;
+        line-height: 40px;
+        top: 0;
+        &::before {
+            font-family: 'icomoon';
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
     }
 }
 
@@ -2081,9 +2153,6 @@ button .icon-unsorted, .product_page_filter_sort {
         span {
             color: $green;
         }
-        &::placeholder {
-            color: #000;
-        }
     }
     select,
     input,
@@ -2094,6 +2163,9 @@ button .icon-unsorted, .product_page_filter_sort {
         height: 40px;
         background-color: #f9f9f9;
         padding: 0px 18px;
+        &::placeholder {
+            color: #707070;
+        }
     }
     textarea {
         resize: none;
@@ -2175,6 +2247,173 @@ button .icon-unsorted, .product_page_filter_sort {
         border-left: none;
     }
 }
+
+.withdrawals_inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.withdrawals_col {
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+}
+.withdrawals_title {
+    font-weight: 500;
+    font-size: 24px;
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    color: $bg;
+}
+.withdrawals_content {
+    padding-left: 35px;
+    padding-right: 40px;
+    button {
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        cursor: pointer;
+    }
+}
+.withdrawals_form_line {
+    margin-bottom: 25px;
+    label {
+        display: block;
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: $bg;
+        span {
+            color: $green;
+        }
+    }
+    input,
+    select {
+        display: block;
+        width: 100%;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    .jq-file {
+        width: 100%;
+        padding: 0px 18px;
+        box-shadow: none;
+        border-radius: 0px;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+    }
+    .jq-file__name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        margin-left: 100px;
+        outline: none;
+    }
+    .jq-file__browse {
+        top: 5px;
+        right: auto;
+        left: 9px;
+        padding: 0px 12px;
+        line-height: 26px;
+        border: 1px solid #d7d7d7;
+        border-left: 1px solid #d7d7d7;
+        border-radius: 0;
+        background:#fff;
+        box-shadow: none;
+        text-shadow: none;
+        color: #444;
+        font-size: 12px;
+        outline: none;
+    }
+    .jq-selectbox {
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color:  #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font: 14px 'Roboto', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        right: 20px;
+        font-size: 15px;
+        line-height: 40px;
+        top: 0;
+        &::before {
+            font-family: 'icomoon';
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+}
+.withdrawals_content_items {
+    padding-bottom: 35px;
+}
+.withdrawals_content_item {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    color: #444;
+    &::nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+}
+.withdrawals_content_date {
+    width: 154px;
+    padding-left: 20px;
+}
+.withdrawals_content_email {
+    width: 180px;
+}
+.withdrawals_content_price {
+    width: 70px;
+    font-weight: 700;
+}
+.withdrawals_content_status {
+    width: 88px;
+    font-weight: 700;
+    &_paid {
+        color: $green;
+    }
+}
+
+
+
+
+
 
 
 @import '_media.scss';
